@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<style>
+body 
+{
+background-image:url('paper.gif');
+background-color:#cccccc;
+}
+</style>
+<style type="text/css">
+
+/*Make sure your page contains a valid doctype at the top*/
+#simplegallery1{ //CSS for Simple Gallery Example 1
+position: relative; /*keep this intact*/
+visibility: hidden; /*keep this intact*/
+border: 10px solid darkred;
+}
+
+#simplegallery1 .gallerydesctext{ //CSS for description DIV of Example 1 (if defined)
+text-align: left;
+padding: 2px 5px;
+}
+
+</style>
+
+<script type="text/javascript" src="simplegallery.js">
+
+/***********************************************
+* Simple Controls Gallery- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+var mygallery=new simpleGallery({
+	wrapperid: "simplegallery1", //ID of main gallery container,
+	dimensions: [250, 180], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+	imagearray: [
+		["http://i48.tinypic.com/5trrs2.jpg", "http://en.wikipedia.org/wiki/halloween", "_new", "The witch is here."],
+		["http://i45.tinypic.com/149ppft.jpg", "http://en.wikipedia.org/wiki/witch", "", ""],
+		["http://i46.tinypic.com/35d3sj8.jpg", "", "", "Like this pic!"],
+		["http://i47.tinypic.com/34rx7x3.jpg", "", "", ""]
+	],
+	autoplay: [true, 2500, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	oninit:function(){ //event that fires when gallery has initialized/ ready to run
+		//Keyword "this": references current gallery instance (ie: try this.navigate("play/pause"))
+	},
+	onslide:function(curslide, i){ //event that fires after each slide is shown
+		//Keyword "this": references current gallery instance
+		//curslide: returns DOM reference to current slide's DIV (ie: try alert(curslide.innerHTML)
+		//i: integer reflecting current image within collection being shown (0=1st image, 1=2nd etc)
+	}
+})
+
+</script>
+	
+	
+</head>
+
+<body>
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
+
+	<div data-role="header">
+		<h1>Halloween App! </h1>
+		<img src= "D:\hacKSU\hacKSU-jquery-mobile-intro-fac6923\3_Multipage\images\logo.jpeg" width="1366" height="250> 
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<ul data-role="listview" data-inset="true" data-filter="false">
+			<li><a href="http://tlc.howstuffworks.com/tv/cake-boss/buddys-halloween-cakes-pictures1.htm">Halloween Cakes</a></li>
+			<li><img src= "D:\hacKSU\hacKSU-jquery-mobile-intro-fac6923\2_Lists\halloween7.gif" width="120" height="80"> <a href="http://www.mainstreetkent.org">Downtown Festival</a></li>
+			<li><a href="http://www.hauntedx.com" data-transition="pop">Haunted House</a></li>
+			<li><a href="http://www.kentohio.net/kent-alive/kent-ohio-photo-gallery-5">Halloween parties in Kent</a></li>
+			<li><a href="#two"> Pictures slideshow </a></li>
+		</ul>
+	</div><!-- /content -->
+	<div data-role="services" class="fb-like" data-href="http://www.facebook.com/KentWired" data-send="true" 
+        data-width="220" data-show-faces="true" data-font="lucida grande"></div>
+
+		
+		<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Call us to know more! </a></p>
+ <!--</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a">
+		<h4>www.kentwired.com</h4>
+	</div><!-- /footer -->
+	
+</div><!-- /page one -->
+
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="b">
+
+	<div data-role="header">
+		<h1>Two</h1>
+	</div><!-- /header -->
+	<div id="simplegallery1"></div> 
+
+	<div data-role="content" data-theme="a">
+	        <li><img src= "D:\hacKSU\hacKSU-jquery-mobile-intro-fac6923\2_Lists\halloween7.gif" width="120" height="80"> </li>
+			<li><img src= "D:\hacKSU\hacKSU-jquery-mobile-intro-fac6923\2_Lists\halloween7.gif" > </li>
+			<li><img src= "D:\hacKSU\hacKSU-jquery-mobile-intro-fac6923\2_Lists\halloween7.gif" width="220" height="180"> </li>
+			<li><img src= "D:\hacKSU\hacKSU-jquery-mobile-intro-fac6923\2_Lists\halloween7.gif" width="120" height="80"> </li>
+			
+		
+	</div><!-- /content -->
+	
+		
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="c">Back to Home "one"</a></p>
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="e">
+		<h1>Contact us</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<h2>Kentwired</h2>
+		<p>  KentWired.com is a collaborative effort of student journalists working for the Daily Kent Stater, TV2 and Black Squirrel Radio News, all independent student media at Kent State University.
+
+           KentWired.com
+           205 FRANKLIN HALL
+           KENT STATE UNIVERSITY
+           KENT, OHIO 44242
+
+           Newsroom phone: (330) 672-2584
+		   TV2 Office phone: (330) 672-3216
+		   Advertising phone: (330) 672-2586
+		   Fax: (330) 672-4880 </p>
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Take me to Home</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>@KentWired</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+</body>
+</html>
