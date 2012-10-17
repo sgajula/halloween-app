@@ -48,12 +48,19 @@ padding: 2px 5px;
 
 var mygallery=new simpleGallery({
 	wrapperid: "simplegallery1", //ID of main gallery container,
-	dimensions: [250, 180], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+	dimensions: [1366, 768], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
 	imagearray: [
 		["http://i48.tinypic.com/5trrs2.jpg", "http://en.wikipedia.org/wiki/halloween", "_new", "The witch is here."],
 		["http://i45.tinypic.com/149ppft.jpg", "http://en.wikipedia.org/wiki/witch", "", ""],
-		["http://i46.tinypic.com/35d3sj8.jpg", "", "", "Like this pic!"],
-		["http://i47.tinypic.com/34rx7x3.jpg", "", "", ""]
+		["http://i46.tinypic.com/35d3sj8.jpg", "", "", ""],
+		["http://i47.tinypic.com/34rx7x3.jpg", "", "", ""],
+		["http://i48.tinypic.com/2nq76ed.jpg", "", "", ""],
+		["http://i49.tinypic.com/2i06nq0.jpg", "", "", ""],
+		["http://i48.tinypic.com/qxpf0w.jpg", "", "", ""],
+		["http://i49.tinypic.com/2s9vh52.jpg", "", "", ""],
+		["http://i49.tinypic.com/swz5ky.jpg", "", "", ""],
+		["http://i47.tinypic.com/2d2j4tg.jpg", "", "", ""]
+		
 	],
 	autoplay: [true, 2500, 2], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
 	persist: false, //remember last viewed slide and recall within same session?
@@ -110,23 +117,24 @@ var mygallery=new simpleGallery({
 <div data-role="page" id="two" data-theme="b">
 
 	<div data-role="header">
-		<h1>Two</h1>
+		<h1>More fun? Check out these cool pics.</h1>
 	</div><!-- /header -->
 	<div id="simplegallery1"></div> 
 
-	<div data-role="content" data-theme="a">
+	 <!-- test with static images 
+	 <div data-role="content" data-theme="a">
 	        <li><img src= "C:\Users\Sai\Documents\GitHub\halloween-app\images\h6.jpg" width="120" height="80"> </li>
 			<li><img src= "C:\Users\Sai\Documents\GitHub\halloween-app\images\h7.jpg" > </li>
 	
 		
 	</div><!-- /content -->
 	
-		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="c">Back to Home "one"</a></p>
+		<p><a href="#one" data-direction="reverse" data-role="button" data-theme="c">Back to Home </a></p>
 
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<h4>@KentWired</h4>
+		<!--<h4>@KentWired</h4>-->
 	</div><!-- /footer -->
 </div><!-- /page two -->
 
@@ -140,7 +148,7 @@ var mygallery=new simpleGallery({
 
 	<div data-role="content" data-theme="d">
 		<h2>Kentwired</h2>
-		<p>  KentWired.com is a collaborative effort of student journalists working for the Daily Kent Stater, TV2 and Black Squirrel Radio News, all independent student media at Kent State University.
+		<p> KentWired.com is a collaborative effort of student journalists working for the Daily Kent Stater, TV2 and Black Squirrel Radio News, all independent student media at Kent State University.
 
            KentWired.com
            205 FRANKLIN HALL
@@ -158,6 +166,8 @@ var mygallery=new simpleGallery({
 		<h4>@KentWired</h4>
 	</div><!-- /footer -->
 </div><!-- /page popup -->
+
+
 
 </body>
 </html>
