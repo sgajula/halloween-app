@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PhotoSwipe</title>
+	<!--<meta name="author" content="Ste Brennan - Code Computerlove - http://www.codecomputerlove.com/" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta name="apple-mobile-web-app-capable" content="yes" /> -->
+	
+	<link href="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.css" rel="stylesheet" />
+	<link href="jquery-mobile.css" type="text/css" rel="stylesheet" />
+	<link href="../photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="../lib/klass.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0rc2/jquery.mobile-1.0rc2.min.js"></script>
+	<script type="text/javascript" src="../code.photoswipe.jquery-3.0.5.min.js"></script>
+	
+	
+	<script type="text/javascript">
+		
+		/*
+		 * IMPORTANT!!!
+		 * REMEMBER TO ADD  rel="external"  to your anchor tags. 
+		 * If you don't this will mess with how jQuery Mobile works
+		 */
+		
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				$('div.gallery-page')
+					.live('pageshow', function(e){
+						
+						var 
+							currentPage = $(e.target),
+							options = {},
+							photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options,  currentPage.attr('id'));
+							
+						return true;
+						
+					})
+					
+					.live('pagehide', function(e){
+						
+						var 
+							currentPage = $(e.target),
+							photoSwipeInstance = PhotoSwipe.getInstance(currentPage.attr('id'));
+
+						if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
+							PhotoSwipe.detatch(photoSwipeInstance);
+						}
+						
+						return true;
+						
+					});
+				
+			});
+		
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+		
+	</script>
+	
+</head>
+<body>
+
+<div data-role="page" id="Home">
+
+	<div data-role="header">
+		<h1>Halloween Pictures </h1>
+		<img src= "C:\Users\Sai\Documents\GitHub\halloween-app\images\back.jpeg" width="1366" height="250> 
+	</div><!-- /header -->
+	
+	
+	<div data-role="content" >	
+		
+				
+		
+		<ul data-role="listview" data-inset="true" data-filter="false">
+			
+			<li><a href="#Gallery1">First Gallery</a></li> 
+			<li><a href="#Gallery2">Second Gallery</a></li>		
+		</ul> 
+		
+			<p><a href="index.html"  target="_blank" data-role="button"  data-transition="pop"> Take me to Home </a></p>
+		
+		
+	<!--	
+		<ul data-role="listview" data-inset="true">
+			<li><a href="01-default.html" target="_blank">Code Computerlove</a></li> 
+		</ul> 
+		-->
+	</div>
+
+	<div data-role="footer">
+		<h4>&copy; www.kentwired.com</h4>
+	</div>
+
+</div>
+
+
+<div data-role="page" data-add-back-btn="true" id="Gallery1" class="gallery-page">
+
+	<div data-role="header">
+		<h1>First Gallery</h1>
+	</div>
+
+	<div data-role="content">	
+		
+		<ul class="gallery">
+		<!-- More images to be added here, this is just for test -->
+			<li><a href="images/s1.jpg" rel="external"><img src="images/s1.jpg" alt="Image 001" /></a></li>
+			<li><a href="images/s2jpg" rel="external"><img src="images/s2.jpg" alt="Image 002" /></a></li>
+			<li><a href="images/s5.jpg" rel="external"><img src="images/s5.jpg" alt="Image 003" /></a></li>
+			<li><a href="images/full/004.jpg" rel="external"><img src="images/thumb/004.jpg" alt="Image 004" /></a></li>
+			<li><a href="images/full/005.jpg" rel="external"><img src="images/thumb/005.jpg" alt="Image 005" /></a></li>
+			<li><a href="images/full/006.jpg" rel="external"><img src="images/thumb/006.jpg" alt="Image 006" /></a></li>
+			<li><a href="images/full/007.jpg" rel="external"><img src="images/thumb/007.jpg" alt="Image 007" /></a></li>
+			<li><a href="images/full/008.jpg" rel="external"><img src="images/thumb/008.jpg" alt="Image 008" /></a></li>
+			<li><a href="images/full/009.jpg" rel="external"><img src="images/thumb/009.jpg" alt="Image 009" /></a></li>
+			
+		</ul>
+		
+	</div>
+	
+	<div data-role="footer">
+		<h4>&copy; www.kentwired.com</h4>
+	</div>
+	
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="Gallery2" class="gallery-page">
+
+	<div data-role="header">
+		<h1>Second Gallery</h1>
+	</div>
+
+	<div data-role="content">	
+		
+		<ul class="gallery">
+		<!-- More images to be added here, this is just for test -->
+			<li><a href="images/s3.jpg" rel="external"><img src="images/s3.jpg" alt="Image 010" /></a></li>
+			<li><a href="images/s4.jpg" rel="external"><img src="images/s4.jpg" alt="Image 011" /></a></li>
+			<li><a href="images/full/012.jpg" rel="external"><img src="images/thumb/012.jpg" alt="Image 012" /></a></li>
+			<li><a href="images/full/013.jpg" rel="external"><img src="images/thumb/013.jpg" alt="Image 013" /></a></li>
+			<li><a href="images/full/014.jpg" rel="external"><img src="images/thumb/014.jpg" alt="Image 014" /></a></li>
+			<li><a href="images/full/015.jpg" rel="external"><img src="images/thumb/015.jpg" alt="Image 015" /></a></li>
+			<li><a href="images/full/016.jpg" rel="external"><img src="images/thumb/016.jpg" alt="Image 016" /></a></li>
+			<li><a href="images/full/017.jpg" rel="external"><img src="images/thumb/017.jpg" alt="Image 017" /></a></li>
+			<li><a href="images/full/018.jpg" rel="external"><img src="images/thumb/018.jpg" alt="Image 018" /></a></li>
+		
+		</ul>
+		
+	</div>
+
+	<div data-role="footer">
+		<h4>&copy; www.kentwired.com</h4>
+	</div>
+</div>
+	
+	<!-- popup -->
+	
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="e">
+		<h1>Contact us</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">
+		<h2>Kentwired</h2>
+		<p> KentWired.com is a collaborative effort of student journalists working for the Daily Kent Stater, TV2 and Black Squirrel Radio News, all independent student media at Kent State University.
+
+           KentWired.com
+           205 FRANKLIN HALL
+           KENT STATE UNIVERSITY
+           KENT, OHIO 44242
+
+           Newsroom phone: (330) 672-2584
+		   TV2 Office phone: (330) 672-3216
+		   Advertising phone: (330) 672-2586
+		   Fax: (330) 672-4880 </p>
+		<p><a href="#Home" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>@KentWired</h4>
+	</div><!-- /footer -->
+	
+</div>
+
+</body>
+</html>

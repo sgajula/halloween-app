@@ -7,6 +7,8 @@
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<script src="D:\hacKSU\hacKSU-jquery-mobile-intro-fac6923\2_Lists\fblike.js"></script>
+	<script type="text/javascript" src="klass.min.js"></script>
+    <script type="text/javascript" src="code.photoswipe-3.0.4.min.js"></script>
 
 	<style type="text/css">
 
@@ -38,7 +40,7 @@ padding: 2px 5px;
 
 var mygallery=new simpleGallery({
 	wrapperid: "simplegallery1", //ID of main gallery container,
-	dimensions: [1200, 600], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+	dimensions: [1366, 768], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
 	imagearray: [
 		["http://i46.tinypic.com/2zg4vfc.jpg","", "", ""],
 		["http://i48.tinypic.com/5trrs2.jpg", "http://en.wikipedia.org/wiki/halloween", "_new", "The witch is here."],
@@ -74,12 +76,15 @@ var mygallery=new simpleGallery({
 	<div id="simplegallery1"></div> 
 	</div><!-- /header -->
 
-	
+	<p><a href="index.html"  target="_blank" data-role="button"  data-transition="pop"> Take me to Home </a></p>
 	</div><!-- /content -->
 	<div data-role="services" class="fb-like" data-href="http://www.facebook.com/KentWired" data-send="true" 
         data-width="220" data-show-faces="true" data-font="lucida grande"></div>
 </div>
 </div><!-- /page -->
+	<div data-role="footer">
+		<h4>@KentWired</h4>
+	</div><!-- /footer -->
 
 </body>
 </html>
